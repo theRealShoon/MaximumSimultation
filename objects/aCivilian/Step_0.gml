@@ -36,7 +36,7 @@ if (state == CivilianActions.Think)
 	var wanderChance = irandom_range(0,100);
 		if (wanderChance<21)
 		{
-		state = CivilianActions.Wander;
+		state = CivilianActions.WanderThink;
 		}
 	}
 }
