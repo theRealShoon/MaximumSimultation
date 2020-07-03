@@ -14,12 +14,12 @@ ableToAttack = true;
 //Conversion to Zombie if you get infection
 if (Infection == 100)
 {
-instance_change(aZombie,ev_create);
+instance_change(aZombie,true);
 }
 //Idle State
 if (state == CivilianActions.Think)
 {
-	if collision_circle(x,y,500,paHelicopter,true,true) 
+	if collision_circle(x,y,500,paHelicopterHover,true,true) 
 	{
 	state = CivilianActions.TowardsHelicopter;
 	}
@@ -32,7 +32,7 @@ if (state == CivilianActions.Think)
 	state = CivilianActions.RunThink
 	}
 	
-	if !collision_circle(x,y,500,paHelicopter,true,true) && !collision_circle(x,y,80,aZombie,true,true)
+	if !collision_circle(x,y,500,paHelicopterHover,true,true) && !collision_circle(x,y,80,aZombie,true,true)
 	{
 	state = CivilianActions.Roll
 	}
@@ -87,9 +87,9 @@ direction = point_direction(x,y,xTo,yTo);
 //Helicopter
 if (state == CivilianActions.TowardsHelicopter)
 {
-
-direction = point_direction(x,y,paHelicopter.x,paHelicopter.y);
-move_towards_point(paHelicopter.x,paHelicopter.y,3.5);
+var nearbyHeli = instance_nearest(x,y,paHelicopterHover)
+direction = point_direction(x,y,nearbyHeli.x,nearbyHeli.y);
+move_towards_point(nearbyHeli.x,nearbyHeli.y,3.5);
 }
 //Wander
 if (state == CivilianActions.WanderThink)

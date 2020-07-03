@@ -1,6 +1,5 @@
 /// @description Birthing Helicopter
 enum HelicopterAction{
-	arrive,
 	think,
 	depart,
 	playerDepart,

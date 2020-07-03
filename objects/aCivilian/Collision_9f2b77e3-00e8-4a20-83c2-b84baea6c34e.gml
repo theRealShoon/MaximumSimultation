@@ -1,5 +1,6 @@
 /// @description Dude help me in!
-if (paHelicopter.currentLoad<paHelicopter.capacity)
+var helicopter = instance_nearest(x,y,paHelicopterHover);
+if (helicopter.currentLoad<helicopter.capacity)
 {
 instance_destroy();
 }

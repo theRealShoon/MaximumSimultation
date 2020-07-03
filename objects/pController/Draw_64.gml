@@ -8,3 +8,4 @@ else
 {
 	draw_text(0,10,"Civilians alive: 0");
 }
+draw_text(0,30,"Civilians saved: " + string(global.saved));
