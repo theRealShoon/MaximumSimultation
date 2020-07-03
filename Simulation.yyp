@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "5c53a8b4-04ab-42bf-8a10-1b9c79e19171",
+            "Value": {
+                "id": "1dac85eb-0fb9-4857-9515-3911f179e5d3",
+                "resourcePath": "sprites\\sHelicopter\\sHelicopter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6a8bb367-dcf9-4d95-9d82-b186079ca39e",
             "Value": {
                 "id": "4142582c-5bc1-45a4-8fc6-995c030d169e",
