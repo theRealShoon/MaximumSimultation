@@ -1,0 +1,1 @@
+/// @description Useless bullet clock, no reload

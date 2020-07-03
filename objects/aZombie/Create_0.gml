@@ -1,0 +1,1 @@
+/// @description Person being infected
