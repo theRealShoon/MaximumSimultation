@@ -127,11 +127,27 @@
             }
         },
         {
+            "Key": "57eae4d7-9c68-41f8-9b41-3c7f7fe33db4",
+            "Value": {
+                "id": "995b126e-d15e-4572-802a-7ad2f96ca2cb",
+                "resourcePath": "objects\\paHelicopterArrive\\paHelicopterArrive.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5c53a8b4-04ab-42bf-8a10-1b9c79e19171",
             "Value": {
                 "id": "1dac85eb-0fb9-4857-9515-3911f179e5d3",
                 "resourcePath": "sprites\\sHelicopter\\sHelicopter.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6208b266-2035-4618-8e78-016d74ebd668",
+            "Value": {
+                "id": "dc793f14-8dda-44b5-af6b-532f570847c5",
+                "resourcePath": "objects\\paHelicopterDepart\\paHelicopterDepart.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -274,7 +290,7 @@
             "Key": "f1ce64e3-30b2-47ff-8b40-995bfedc9869",
             "Value": {
                 "id": "b485ec84-1893-4029-876d-a58a14e2d941",
-                "resourcePath": "objects\\paHelicopter\\paHelicopter.yy",
+                "resourcePath": "objects\\paHelicopterHover\\paHelicopterHover.yy",
                 "resourceType": "GMObject"
             }
         },

@@ -8,6 +8,7 @@ enum HelicopterAction{
 
 }
 state = HelicopterAction.think;
+arrivalPos = mouse_x;
 
 capacity = 25;
 currentLoad = 0;
