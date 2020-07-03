@@ -29,7 +29,7 @@ if (state == CivilianActions.Think)
 	}
 	if (collision_circle(x,y,80,aZombie,true,true) && (ableToAttack == false))
 	{
-	state = CivilianActions.Run
+	state = CivilianActions.RunThink
 	}
 	else
 	{
@@ -79,7 +79,31 @@ direction = point_direction(x,y,xTo,yTo);
 //Helicopter
 if (state == CivilianActions.TowardsHelicopter)
 {
+direction = point_direction(x,y,paHelicopter.x,paHelicopter.y);
 move_towards_point(paHelicopter.x,paHelicopter.y,3.5);
+}
+//Wander
+if (state == CivilianActions.WanderThink)
+{
+xTo = x + irandom_range(-10,10);
+yTo = y + irandom_range(-10,10);
+	if place_free(xTo,yTo)
+	{
+	state = CivilianActions.Wander
+	}
+	else
+	{
+	state = CivilianActions.Think;
+	}
+}
+if (state == CivilianActions.Wander)
+{
+move_towards_point(xTo,yTo,3);
+direction = point_direction(x,y,xTo,yTo);
+	if (x == xTo && y == yTo)
+	{
+	state = CivilianActions.Think;
+	}
 }
 //Face your direction
 image_angle = direction;
