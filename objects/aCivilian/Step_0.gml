@@ -86,6 +86,7 @@ direction = point_direction(x,y,xTo,yTo);
 //Helicopter
 if (state == CivilianActions.TowardsHelicopter)
 {
+
 direction = point_direction(x,y,paHelicopter.x,paHelicopter.y);
 move_towards_point(paHelicopter.x,paHelicopter.y,3.5);
 }
@@ -105,11 +106,11 @@ yTo = y + irandom_range(-10,10);
 }
 if (state == CivilianActions.Wander)
 {
-move_towards_point(xTo,yTo,3);
+mp_potential_step(xTo,yTo,3,true)
 direction = point_direction(x,y,xTo,yTo);
-alarm_set(1,120)
 	if (x == xTo && y == yTo)
 	{
+	alarm_set(1,120)
 	state = CivilianActions.Think;
 	}
 }
