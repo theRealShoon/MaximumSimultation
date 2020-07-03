@@ -8,6 +8,7 @@ enum CivilianActions {
 	TowardsHelicopter,
 	RunThink,
 	Run,
+	Roll,
 }
 
 state = CivilianActions.Think;

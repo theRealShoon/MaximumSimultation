@@ -23,7 +23,7 @@ if (state == CivilianActions.Think)
 	{
 	state = CivilianActions.TowardsHelicopter;
 	}
-	if (collision_circle(x,y,80,aZombie,true,true) && ableToAttack == true)
+	if (collision_circle(x,y,80,aZombie,true,true) && (ableToAttack == true))
 	{
 	state = CivilianActions.Attack;
 	}
@@ -31,13 +31,20 @@ if (state == CivilianActions.Think)
 	{
 	state = CivilianActions.RunThink
 	}
-	else
+	
+	if !collision_circle(x,y,500,paHelicopter,true,true) && !collision_circle(x,y,80,aZombie,true,true)
 	{
-	var wanderChance = irandom_range(0,100);
-		if (wanderChance<21)
-		{
-		state = CivilianActions.WanderThink;
-		}
+	state = CivilianActions.Roll
+	}
+
+}
+//Roll
+if (state == CivilianActions.Roll)
+{
+var wanderChance = irandom_range(0,100);
+	if (wanderChance<21) && (alarm_get(1)<1)
+	{
+	state = CivilianActions.WanderThink;
 	}
 }
 //Attack State
@@ -100,6 +107,7 @@ if (state == CivilianActions.Wander)
 {
 move_towards_point(xTo,yTo,3);
 direction = point_direction(x,y,xTo,yTo);
+alarm_set(1,120)
 	if (x == xTo && y == yTo)
 	{
 	state = CivilianActions.Think;
