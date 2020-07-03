@@ -52,7 +52,8 @@ if (state == CivilianActions.Attack)
 {
 	if (alarm_get(0)<1)
 	{
-		direction = point_direction(x,y,aZombie.x,aZombie.y);
+		var zombieTarget = instance_nearest(x,y,aZombie);
+		direction = point_direction(x,y,zombieTarget.x,zombieTarget.y);
 		instance_create_depth(xPos, yPos, depth, aBullet);
 		alarm_set(0,30);
 		//Makes AI think about next move
