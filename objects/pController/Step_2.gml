@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Change State
 var change = keyboard_check_released(ord("E"));
 switch(inventoryState)
 {
@@ -14,10 +13,16 @@ switch(inventoryState)
 	case 2:
 		if (change)
 		{
-		inventoryState = MidGameUsage.helicopter;
+		inventoryState = MidGameUsage.click;
 		}
 		break;
 	case 3:
+		break;
+	case 4:
+		if (change)
+		{
+		inventoryState = MidGameUsage.helicopter;
+		}
 		break;
 
 }

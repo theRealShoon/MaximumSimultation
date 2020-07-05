@@ -11,6 +11,7 @@ enum MidGameUsage {
 	bombard,
 	civilians,//Temporary
 	zombies,//Temporary
+	click,
 }
 
 inventoryState = MidGameUsage.helicopter;

@@ -7,6 +7,17 @@ var distance = point_distance(0,0,offsetX,offsetY);
 var xPos = x + lengthdir_x(distance, offsetY + angle)
 var yPos = y + lengthdir_y(distance, offsetY + angle)
 //Stat Info
+if collision_rectangle(x-2,y-2,x+2,y+2,pCursor,true,true) && mouse_check_button_released(mb_left)
+{
+	if (pController.inventoryState == MidGameUsage.click)
+	{
+	statinfo = 1;
+	}
+}
+if !collision_rectangle(x-2,y-2,x+2,y+2,pCursor,true,true) && mouse_check_button_released(mb_left)
+{
+	statinfo = 0;
+}
 
 
 //Says if Civlian is Armed

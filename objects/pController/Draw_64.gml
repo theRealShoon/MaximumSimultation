@@ -1,4 +1,6 @@
 /// @description Little death count can't hurt
+draw_set_color(c_white)
+
 if instance_exists(aCivilian)
 {
 	var count = instance_number(aCivilian);
@@ -18,4 +20,9 @@ draw_text(0,700,"Helicopter")
 if (inventoryState == MidGameUsage.civilians)
 {
 draw_text(0,700,"Civilian")
+}
+
+if (inventoryState == MidGameUsage.click)
+{
+draw_text(0,700,"Click")
 }
