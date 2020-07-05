@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "331cb99f-5281-4cb4-887b-1677a8b63ebd",
+            "Value": {
+                "id": "14aaee0d-0f77-40e8-950e-2eb160b814e9",
+                "resourcePath": "objects\\pCursor\\pCursor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3a5c8dcb-6e52-47a5-8929-1a5e7ac5e51f",
             "Value": {
                 "id": "e1b18000-566a-4dfd-b560-af13fa0d5105",
@@ -139,6 +147,14 @@
             "Value": {
                 "id": "1dac85eb-0fb9-4857-9515-3911f179e5d3",
                 "resourcePath": "sprites\\sHelicopter\\sHelicopter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5f021741-cc92-40bc-91c0-e1e79a3fe249",
+            "Value": {
+                "id": "f394ceb6-4520-47d4-8194-cac886267806",
+                "resourcePath": "sprites\\sCursor\\sCursor.yy",
                 "resourceType": "GMSprite"
             }
         },

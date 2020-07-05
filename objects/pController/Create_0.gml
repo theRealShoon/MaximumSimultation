@@ -14,8 +14,3 @@ enum MidGameUsage {
 }
 
 inventoryState = MidGameUsage.helicopter;
-
-zoomAmount = 0;
-maxZoom = 3;
-viewWidth = 
-viewHeight

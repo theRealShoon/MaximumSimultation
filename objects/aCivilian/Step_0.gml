@@ -6,6 +6,9 @@ var angle = point_direction(0,0,offsetX,offsetY);
 var distance = point_distance(0,0,offsetX,offsetY);
 var xPos = x + lengthdir_x(distance, offsetY + angle)
 var yPos = y + lengthdir_y(distance, offsetY + angle)
+//Stat Info
+
+
 //Says if Civlian is Armed
 if (Armed<26)
 {
@@ -19,7 +22,7 @@ instance_change(aZombie,true);
 //Idle State
 if (state == CivilianActions.Think)
 {
-	if collision_circle(x,y,500,paHelicopterHover,true,true) 
+	if collision_circle(x,y,350,paHelicopterHover,true,true) 
 	{
 	state = CivilianActions.TowardsHelicopter;
 	}
@@ -32,7 +35,7 @@ if (state == CivilianActions.Think)
 	state = CivilianActions.RunThink
 	}
 	
-	if !collision_circle(x,y,500,paHelicopterHover,true,true) && !collision_circle(x,y,80,aZombie,true,true)
+	if !collision_circle(x,y,350,paHelicopterHover,true,true) && !collision_circle(x,y,80,aZombie,true,true)
 	{
 	state = CivilianActions.Roll
 	}
@@ -87,9 +90,16 @@ direction = point_direction(x,y,xTo,yTo);
 //Helicopter
 if (state == CivilianActions.TowardsHelicopter)
 {
-var nearbyHeli = instance_nearest(x,y,paHelicopterHover)
-direction = point_direction(x,y,nearbyHeli.x,nearbyHeli.y);
-move_towards_point(nearbyHeli.x,nearbyHeli.y,3.5);
+	if (instance_exists(paHelicopterHover))
+	{
+	var nearbyHeli = instance_nearest(x,y,paHelicopterHover)
+	direction = point_direction(x,y,nearbyHeli.x,nearbyHeli.y);
+	mp_potential_step_object(nearbyHeli.x,nearbyHeli.y,3.5,aWall);
+	}
+	else
+	{
+	state = CivilianActions.Think;
+	}
 }
 //Wander
 if (state == CivilianActions.WanderThink)
