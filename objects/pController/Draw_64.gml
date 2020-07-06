@@ -26,3 +26,8 @@ if (inventoryState == MidGameUsage.click)
 {
 draw_text(0,700,"Click")
 }
+
+if (inventoryState == MidGameUsage.zombies)
+{
+draw_text(0,700,"Zombie")
+}

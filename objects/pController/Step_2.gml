@@ -13,10 +13,14 @@ switch(inventoryState)
 	case 2:
 		if (change)
 		{
-		inventoryState = MidGameUsage.click;
+		inventoryState = MidGameUsage.zombies;
 		}
 		break;
 	case 3:
+		if (change)
+		{
+		inventoryState = MidGameUsage.click;
+		}
 		break;
 	case 4:
 		if (change)

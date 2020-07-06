@@ -26,7 +26,7 @@ if (Armed<26)
 ableToAttack = true;
 }
 //Conversion to Zombie if you get infection
-if (Infection == 100)
+if (Infection>99)
 {
 instance_change(aZombie,true);
 }
@@ -37,11 +37,11 @@ if (state == CivilianActions.Think)
 	{
 	state = CivilianActions.TowardsHelicopter;
 	}
-	if (collision_circle(x,y,80,aZombie,true,true) && (ableToAttack == true))
+	if (collision_circle(x,y,100,aZombie,true,true) && (ableToAttack == true))
 	{
 	state = CivilianActions.Attack;
 	}
-	if (collision_circle(x,y,80,aZombie,true,true) && (ableToAttack == false))
+	if (collision_circle(x,y,100,aZombie,true,true) && (ableToAttack == false))
 	{
 	state = CivilianActions.RunThink
 	}
@@ -60,6 +60,10 @@ var wanderChance = irandom_range(0,100);
 	{
 	state = CivilianActions.WanderThink;
 	}
+	else
+	{
+	state = CivilianActions.Think;
+	}
 }
 //Attack State
 if (state == CivilianActions.Attack)
@@ -77,8 +81,8 @@ if (state == CivilianActions.Attack)
 //Think about where to run
 if (state == CivilianActions.RunThink)
 {
-xTo = x + irandom_range(-50,50);
-yTo = y + irandom_range(-50,50);
+xTo = x + irandom_range(-100,100);
+yTo = y + irandom_range(-100,100);
 	if place_free(xTo,yTo)
 	{
 	state = CivilianActions.Run
@@ -91,7 +95,7 @@ yTo = y + irandom_range(-50,50);
 //Run
 if (state == CivilianActions.Run)
 {
-move_towards_point(xTo,yTo,3);
+mp_potential_step(xTo,yTo,3,true);
 direction = point_direction(x,y,xTo,yTo);
 	if (x == xTo && y == yTo)
 	{

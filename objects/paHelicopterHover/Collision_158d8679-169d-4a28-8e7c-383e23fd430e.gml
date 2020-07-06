@@ -1,2 +1,2 @@
 /// @description WTH the zombie is strong af
-HP -= 5;
+HP -= 3;

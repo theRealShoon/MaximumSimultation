@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Draw Stats
 var darkblue = make_color_rgb(72,72,112)
 
 if (statinfo == 1)
@@ -40,4 +39,12 @@ if (statinfo == 1)
 			break;
 	}
 	draw_text(10,96,fname + " " + lname);
+	if (Armed<26)
+	{
+	draw_text(10,124,"Is armed: True");
+	}
+	else
+	{
+	draw_text(10,124,"Is armed: False");
+	}
 }
