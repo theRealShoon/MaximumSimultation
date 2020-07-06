@@ -39,4 +39,5 @@ if (statinfo == 1)
 			draw_text(10,64,"Action State: Considering wandering")
 			break;
 	}
+	draw_text(10,96,fname);
 }
