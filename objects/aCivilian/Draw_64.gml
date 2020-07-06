@@ -38,8 +38,5 @@ if (statinfo == 1)
 		case 8:
 			draw_text(10,64,"Action State: Considering wandering")
 			break;
-	
-	
-	
 	}
 }
