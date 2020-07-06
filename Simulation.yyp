@@ -231,6 +231,22 @@
             }
         },
         {
+            "Key": "9379ff2e-6c61-4f50-9732-c33a21d0e2b1",
+            "Value": {
+                "id": "2b5fe229-c9cf-4a6b-bf63-5429ef581be4",
+                "resourcePath": "tilesets\\tsZombie\\tsZombie.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "9ac120ff-b0b9-454c-8652-c2ad1193d3a0",
+            "Value": {
+                "id": "979cc3a1-9efd-426a-82ab-c35458ec258b",
+                "resourcePath": "sprites\\sZombieTilesSet\\sZombieTilesSet.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a86c7b3b-7868-4899-b211-90ad5c2cd384",
             "Value": {
                 "id": "25a844b8-a46b-47b0-b180-75d3f731396c",
