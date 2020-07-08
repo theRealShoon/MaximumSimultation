@@ -21,3 +21,5 @@ lname = last_name_generate();
 
 
 Armed = irandom_range(0,100);
+
+COLLISIONTS = layer_tilemap_get_id(layer_get_id("TileLayer"));
