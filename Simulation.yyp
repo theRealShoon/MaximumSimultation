@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "3f946e97-b4bd-41e3-9890-a0211f5553c6",
+            "Value": {
+                "id": "8ed864d3-c532-484a-8579-07947e4a64ec",
+                "resourcePath": "sprites\\sZombieWallTS\\sZombieWallTS.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4312e1fd-bd42-4a05-893e-f14b6fa7677f",
             "Value": {
                 "id": "6810dd97-b119-40de-a423-f448873df886",
@@ -242,7 +250,7 @@
             "Key": "9ac120ff-b0b9-454c-8652-c2ad1193d3a0",
             "Value": {
                 "id": "979cc3a1-9efd-426a-82ab-c35458ec258b",
-                "resourcePath": "sprites\\sZombieTilesSet\\sZombieTilesSet.yy",
+                "resourcePath": "sprites\\sZombieTS\\sZombieTS.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -268,6 +276,14 @@
                 "id": "83078ce2-7744-48c2-bd91-50af54779bba",
                 "resourcePath": "views\\af74c654-f3f3-4d62-bc6a-5011a5c28bbc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b398dfa1-f5e8-4d35-8146-673f6c8f5bc1",
+            "Value": {
+                "id": "7c2e60d6-0968-4d50-8302-8e931456cf5b",
+                "resourcePath": "sprites\\sZombieBackgroundTS\\sZombieBackgroundTS.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -348,6 +364,14 @@
                 "id": "cb445c7a-b6a0-496f-acd9-5d1515e35163",
                 "resourcePath": "views\\f29cedf2-0b46-49ea-9b8d-f9472b9e51a1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f2c69450-d2ab-4011-a719-370680e015c1",
+            "Value": {
+                "id": "d52be4a6-961e-49fb-846d-1c8b9fd2ec58",
+                "resourcePath": "tilesets\\tsZombieWall\\tsZombieWall.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
