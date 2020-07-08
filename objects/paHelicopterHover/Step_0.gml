@@ -1,5 +1,5 @@
 /// @description Do machines think?
-if (HP == 0)
+if (HP<1)
 {
 instance_destroy();//Plan on having an explosion, but this works for now
 }

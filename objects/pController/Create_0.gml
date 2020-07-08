@@ -14,4 +14,5 @@ enum MidGameUsage {
 	click,
 }
 
+COLLISIONTS = layer_tilemap_get_id(layer_get_id("TileLayer"));
 inventoryState = MidGameUsage.helicopter;

@@ -1,4 +1,15 @@
 ///@description Being born process
+enum CivilianActions {
+	Think,
+	Move,
+	Wander,
+	WanderThink,
+	Attack,
+	TowardsHelicopter,
+	RunThink,
+	Run,
+	Roll,
+}
 
 state = CivilianActions.Think;
 ableToAttack = false

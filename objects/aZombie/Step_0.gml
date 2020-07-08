@@ -3,12 +3,26 @@ if (HP<1)
 {
 instance_destroy();
 }
+//Statinfo
+if collision_rectangle(x-2,y-2,x+2,y+2,pCursor,true,true) && mouse_check_button_released(mb_left)
+{
+	if (pController.inventoryState == MidGameUsage.click)
+	{
+	statinfo = 1;
+	}
+}
+if !collision_rectangle(x-2,y-2,x+2,y+2,pCursor,true,true) && mouse_check_button_released(mb_left)
+{
+	statinfo = 0;
+}
+
+
 //Thinking?
 if (state == ZombieActions.Think)
 {
 	if collision_circle(x,y,125,aCivilian,true,true)
 	{
-		state = ZombieActions.Chase
+		state = ZombieActions.Chase;
 	}
 	
 	if collision_circle(x,y,350,paHelicopterHover,true,true)
@@ -39,7 +53,7 @@ if (state == ZombieActions.WanderThink)
 {
 xTo = x + irandom_range(-100,100);
 yTo = y + irandom_range(-100,100);
-	if place_free(xTo,yTo)
+	if (tilemap_get_at_pixel(COLLISIONTS,xTo,yTo)==1)
 	{
 		state = ZombieActions.Wander;
 	}
@@ -50,7 +64,7 @@ yTo = y + irandom_range(-100,100);
 }
 if (state == ZombieActions.Wander)
 {
-mp_potential_step(xTo,yTo,4,true);
+mp_potential_step(xTo,yTo,3.6,true);
 direction = point_direction(x,y,xTo,yTo);
 	if (x == xTo && y == yTo)
 	{
@@ -68,7 +82,7 @@ if (state == ZombieActions.Chase)
 			var target = instance_nearest(x,y,aCivilian);
 			var _x = target.x;
 			var _y = target.y;
-			move_towards_point(_x,_y,4);
+			move_towards_point(_x,_y,3.6);
 			direction = point_direction(x,y,_x,_y);
 		}
 	}
@@ -88,7 +102,7 @@ if (state == ZombieActions.ChaseHeli)
 		var target = instance_nearest(x,y,paHelicopterHover);
 		var _x = target.x;
 		var _y = target.y;
-		move_towards_point(_x,_y,4);
+		move_towards_point(_x,_y,3.6);
 		direction = point_direction(x,y,_x,_y);
 		}
 	}

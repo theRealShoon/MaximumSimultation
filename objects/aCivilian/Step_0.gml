@@ -25,11 +25,7 @@ if (Armed<26)
 {
 ableToAttack = true;
 }
-//Conversion to Zombie if you get infection
-if (Infection>99)
-{
-instance_change(aZombie,true);
-}
+
 //Idle State
 if (state == CivilianActions.Think)
 {
@@ -68,7 +64,7 @@ var wanderChance = irandom_range(0,100);
 //Attack State
 if (state == CivilianActions.Attack)
 {
-	if (alarm_get(0)<1)
+	if (alarm_get(0)<1) && instance_exists(aZombie)
 	{
 		var zombieTarget = instance_nearest(x,y,aZombie);
 		direction = point_direction(x,y,zombieTarget.x,zombieTarget.y);
@@ -83,7 +79,7 @@ if (state == CivilianActions.RunThink)
 {
 xTo = x + irandom_range(-100,100);
 yTo = y + irandom_range(-100,100);
-	if place_free(xTo,yTo)
+	if (tilemap_get_at_pixel(COLLISIONTS,xTo,yTo)==1)
 	{
 	state = CivilianActions.Run
 	}
@@ -121,7 +117,7 @@ if (state == CivilianActions.WanderThink)
 {
 xTo = x + irandom_range(-10,10);
 yTo = y + irandom_range(-10,10);
-	if place_free(xTo,yTo)
+	if (tilemap_get_at_pixel(COLLISIONTS,xTo,yTo)==1)
 	{
 	state = CivilianActions.Wander
 	}
@@ -142,3 +138,12 @@ direction = point_direction(x,y,xTo,yTo);
 }
 //Face your direction
 image_angle = direction;
+//Conversion to Zombie if you get infection
+if (Infection>99)
+{
+var infected = instance_change(aZombie,true);
+	with (infected)
+	{
+	state = ZombieActions.Think;
+	}
+}

@@ -58,7 +58,7 @@
             "Key": "0ebc68a9-2c1d-4a9d-a1b9-1973b7a42184",
             "Value": {
                 "id": "08d3feba-1adc-4ff1-94b5-cccd282a0f72",
-                "resourcePath": "objects\\aTSTestCivilian\\aTSTestCivilian.yy",
+                "resourcePath": "objects\\aCivilian\\aCivilian.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "72586f5a-de72-488f-84ec-2e879e7499fc",
+            "Value": {
+                "id": "4c5506ed-c1be-4ef2-8393-4438e5aa4bc3",
+                "resourcePath": "objects\\eEnumCreator\\eEnumCreator.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "72a913eb-401b-41cc-839f-2af82039da4f",
             "Value": {
                 "id": "2bb98b55-c340-4940-83dc-8d00b0f771c0",
@@ -218,7 +226,7 @@
             "Key": "79023c85-b1de-4916-8661-41a3b4cd3031",
             "Value": {
                 "id": "12a3e79a-6957-4130-839c-4b09ae9ee62c",
-                "resourcePath": "objects\\aCivilian\\aCivilian.yy",
+                "resourcePath": "objects\\oldCivilianCode\\oldCivilianCode.yy",
                 "resourceType": "GMObject"
             }
         },

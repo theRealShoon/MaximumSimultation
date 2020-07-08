@@ -2,9 +2,9 @@
 
 if (inventoryState == MidGameUsage.civilians)
 {
-	if (mouse_check_button_released(mb_left))
+	if (mouse_check_button_released(mb_left) && (tilemap_get_at_pixel(COLLISIONTS,mouse_x,mouse_y)==1))
 	{
-	instance_create_depth(mouse_x,mouse_y,depth - 1,aTSTestCivilian);
+	instance_create_depth(mouse_x,mouse_y,depth - 1,aCivilian);
 	}
 }
 

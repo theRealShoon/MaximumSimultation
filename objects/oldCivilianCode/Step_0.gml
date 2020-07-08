@@ -83,7 +83,7 @@ if (state == CivilianActions.RunThink)
 {
 xTo = x + irandom_range(-100,100);
 yTo = y + irandom_range(-100,100);
-	if (tilemap_get_at_pixel(COLLISIONTS,xTo,yTo)==1)
+	if place_free(xTo,yTo)
 	{
 	state = CivilianActions.Run
 	}
@@ -121,7 +121,7 @@ if (state == CivilianActions.WanderThink)
 {
 xTo = x + irandom_range(-10,10);
 yTo = y + irandom_range(-10,10);
-	if (tilemap_get_at_pixel(COLLISIONTS,xTo,yTo)==1)
+	if place_free(xTo,yTo)
 	{
 	state = CivilianActions.Wander
 	}

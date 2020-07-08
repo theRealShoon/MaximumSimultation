@@ -1,0 +1,1 @@
+/// @description Was this helicopter always there?
