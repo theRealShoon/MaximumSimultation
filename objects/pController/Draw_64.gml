@@ -11,6 +11,19 @@ else
 	draw_text(0,10,"Civilians alive: 0");
 }
 draw_text(0,30,"Civilians saved: " + string(global.saved));
+draw_text(0,50,"Civilians infected: " + string(global.infected));
+draw_text(0,70,"Civilians killed: " + string(global.civKilled));
+if instance_exists(aZombie)
+{
+	var zcount = instance_number(aZombie);
+	draw_text(0,90,"Zombies alive:" + string(zcount));
+}
+else
+{
+	draw_text(0,90,"Zombies alive: 0");
+}
+draw_text(0,110,"Zombies killed: " + string(global.zKilled));
+
 
 if (inventoryState == MidGameUsage.helicopter)
 {

@@ -141,9 +141,15 @@ image_angle = direction;
 //Conversion to Zombie if you get infection
 if (Infection>99)
 {
+global.infected++;
 var infected = instance_change(aZombie,true);
 	with (infected)
 	{
 	state = ZombieActions.Think;
 	}
+}
+if (HP<1)
+{
+global.civKilled++;
+instance_destroy();
 }

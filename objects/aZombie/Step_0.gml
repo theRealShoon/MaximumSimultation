@@ -1,6 +1,7 @@
 /// @description Do zombies think?
 if (HP<1)
 {
+global.zKilled++;
 instance_destroy();
 }
 //Statinfo

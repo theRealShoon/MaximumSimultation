@@ -1,5 +1,8 @@
 /// @description Variables
 global.saved = 0;
+global.infected = 0;
+global.civKilled = 0;
+global.zKilled = 0;
 
 enum Activity{
 	unactive,
